@@ -1,0 +1,30 @@
+{
+  "name": "crypotai",
+  "version": "0.0.1",
+  "description": "Crypto currency trader AI",
+  "main": "server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JvJefke/CryptoAI.git"
+  },
+  "keywords": [
+    "crypto",
+    "AI"
+  ],
+  "author": "Jeroen Valcke <valcke_jeroen@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JvJefke/CryptoAI/issues"
+  },
+  "homepage": "https://github.com/JvJefke/CryptoAI#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "glob": "^7.1.2",
+    "ramda": "^0.25.0",
+    "rxjs": "^6.1.0",
+    "synaptic": "^1.1.4"
+  }
+}

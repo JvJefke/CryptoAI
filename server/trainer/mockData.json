@@ -1,0 +1,71 @@
+[{
+	"values": [],
+	"main": 1,
+	"expectedResult": 1,
+	"startDate": "2018-05-07T21:24:38.212Z",
+	"endDate": "2018-05-07T21:24:38.212Z",
+	"percentageGain": 0.1
+}, {
+	"values": [],
+	"main": 1.5,
+	"expectedResult": 1,
+	"startDate": "2018-05-07T21:24:38.212Z",
+	"endDate": "2018-05-07T21:24:38.212Z",
+	"percentageGain": 0.5
+}, {
+	"values": [],
+	"main": 1,
+	"expectedResult": 1,
+	"startDate": "2018-05-07T21:24:38.212Z",
+	"endDate": "2018-05-07T21:24:38.212Z",
+	"percentageGain": 0.1
+}, {
+	"values": [],
+	"main": 1,
+	"expectedResult": 1,
+	"startDate": "2018-05-07T21:24:38.212Z",
+	"endDate": "2018-05-07T21:24:38.212Z",
+	"percentageGain": 0.1
+}, {
+	"values": [],
+	"main": 1,
+	"expectedResult": 1,
+	"startDate": "2018-05-07T21:24:38.212Z",
+	"endDate": "2018-05-07T21:24:38.212Z",
+	"percentageGain": 0.1
+}, {
+	"values": [],
+	"main": 1,
+	"expectedResult": 1,
+	"startDate": "2018-05-07T21:24:38.212Z",
+	"endDate": "2018-05-07T21:24:38.212Z",
+	"percentageGain": 0.1
+}, {
+	"values": [],
+	"main": 1,
+	"expectedResult": 1,
+	"startDate": "2018-05-07T21:24:38.212Z",
+	"endDate": "2018-05-07T21:24:38.212Z",
+	"percentageGain": 0.1
+}, {
+	"values": [],
+	"main": 1,
+	"expectedResult": 0,
+	"startDate": "2018-05-07T21:24:38.212Z",
+	"endDate": "2018-05-07T21:24:38.212Z",
+	"percentageGain": -0.0043
+}, {
+	"values": [],
+	"main": 1,
+	"expectedResult": 0,
+	"startDate": "2018-05-07T21:24:38.212Z",
+	"endDate": "2018-05-07T21:24:38.212Z",
+	"percentageGain": -0.1
+}, {
+	"values": [],
+	"main": 1,
+	"expectedResult": 0,
+	"startDate": "2018-05-07T21:24:38.212Z",
+	"endDate": "2018-05-07T21:24:38.212Z",
+	"percentageGain": -0.3
+}]
