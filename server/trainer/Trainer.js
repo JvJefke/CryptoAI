@@ -1,14 +1,16 @@
 const Network = require("synaptic").Network;
 const Rx = require("rxjs");
 
+const config = require("./trainerConfig");
+
 module.exports = class Trainer {
 	network = null;
-	learningRate = 0.1;
+	learningRate = null;
 	isTraining = false;
 
 	constructor(
 		storedData = null,
-		learningRate = 0.1
+		learningRate = config.DEFUALT_LEARNING_RATES,
 	) {
 		this.learningRate = learningRate;
 		this.init(storedData);
@@ -20,14 +22,14 @@ module.exports = class Trainer {
 			return;
 		}
 
-		const inputLayer = new Layer(204);
-		const hiddenLayer = new Layer(103);
-		const outpuLayer = new Layer(1);
+		const inputLayer = new Layer(config.inputLayers);
+		const hiddenLayer = new Layer(config.hiddenLayers);
+		const outputLayer = new Layer(config.outputLayers);
 
 		this.network = new Network({
 			input: inputLayer,
 			hidden: [hiddenLayer],
-			output: outpuLayer
+			output: outputLayer
 		});
 	}
 
@@ -39,7 +41,7 @@ module.exports = class Trainer {
 		this.isTraining = true;
 
 		return new Rx.Observable.create((observer) => {
-			for (let i = 203; i <= dataset.length; i++) {
+			for (let i = config.inputLayers - 1; i <= dataset.length - 1; i++) {
 				if (!this.isTraining) {
 					break;
 				}
@@ -47,17 +49,19 @@ module.exports = class Trainer {
 				setTimeout(() => {
 					// Run it through a slice of the dataset
 					this.network.activate(
-						dataset.slice(i - 203, (i -1))
+						dataset.slice(i - (config.inputLayer - 1), (i + 1))
 							.map((dataPoint) => dataPoint.percentageGain)
 					);
 
-					this.network.propagate(this.learningRate, [dataPoint.expectedResult]);
+					this.network.propagate(this.learningRate, [dataset[i].expectedResult]);
 
 					if (i % 10000 === 0) {
 						observer.next(this.network.toJSON());
 					}
 				});
 			}
+			observer.next(this.network.toJSON());
+			observer.complete();
 		});
 	}
 
